@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Dork Search Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Google Dork Search Tool</h1>
+        <form id="dorkForm">
+            <div class="form-group">
+                <label for="targetDomain">Enter Domain (e.g., example.com):</label>
+                <input type="text" id="targetDomain" placeholder="Enter target domain" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Select Query Category:</label>
+                <select id="category" required>
+                    <option value="emails">Finding Emails</option>
+                    <option value="login">Login Pages</option>
+                    <option value="config">Configuration Files</option>
+                    <option value="docs">Documents (PDF, Excel)</option>
+                    <option value="vulnerabilities">Vulnerabilities (SQL, Config Files)</option>
+                    <option value="devices">Vulnerable Devices</option>
+                    <option value="directories">Open Directories</option>
+                    <option value="backup">Backup Files</option>
+                    <option value="medical">Medical Records</option>
+                    <option value="transactions">E-commerce Transactions</option>
+                    <option value="api">Unsecured API Endpoints</option>
+                    <option value="databases">Unsecured Databases</option>
+                    <option value="cameras">Exposed Cameras</option>
+                    <option value="financial">Financial Records</option>
+                    <option value="upload">File Upload Systems</option>
+                    <option value="server">Server Status Pages</option>
+                    <option value="dev">Development & Test Environments</option>
+                    <option value="github">Exposed Git Repositories</option>
+                    <option value="credentials">Exposed Login Credentials</option>
+                    <option value="network">Network Devices and Routers</option>
+                    <option value="cve">Exposed CVE Vulnerabilities</option>
+                    <option value="phpinfo">Exposed PHP Info Pages</option>
+                    <option value="ftp">Exposed FTP Servers</option>
+                    <option value="printer">Exposed Printers</option>
+                    <option value="customer">Exposed Customer Data</option>
+                    <option value="passwords">Password Files</option>
+                    <option value="exploits">Known Exploits</option>
+                    <option value="sessions">Session IDs</option>
+                </select>
+            </div>
+
+            <!-- Add custom query input -->
+            <div class="form-group" id="customQuery">
+                <label for="customDork">Or Enter Custom Google Dork Query:</label>
+                <input type="text" id="customDork" placeholder="Enter custom Google Dork query">
+            </div>
+
+            <div class="form-group">
+                <label for="searchType">Choose Search Type:</label>
+                <select id="searchType" required>
+                    <option value="site">Search by Domain</option>
+                    <option value="custom">Use Custom Query</option>
+                </select>
+            </div>
+
+            <button type="submit">Search</button>
+        </form>
+
+        <div id="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
