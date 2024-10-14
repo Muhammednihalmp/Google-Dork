@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Dork Search Tool</title>
+    <title>Penetration Testing Search Tool</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Importing a more "hacker" style font -->
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Google Dork Search Tool</h1>
+        <h1>PenTest Dorking Tool</h1>
         <form id="dorkForm">
             <div class="form-group">
                 <label for="targetDomain">Enter Domain (e.g., example.com):</label>
@@ -48,7 +50,6 @@
                 </select>
             </div>
 
-            <!-- Add custom query input -->
             <div class="form-group" id="customQuery">
                 <label for="customDork">Or Enter Custom Google Dork Query:</label>
                 <input type="text" id="customDork" placeholder="Enter custom Google Dork query">
@@ -62,7 +63,7 @@
                 </select>
             </div>
 
-            <button type="submit">Search</button>
+            <button type="submit">Launch Attack</button>
         </form>
 
         <div id="results"></div>
