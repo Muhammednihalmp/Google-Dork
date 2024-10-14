@@ -1,7 +1,8 @@
+/* General body styling for the hacker-like look */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
+    font-family: 'VT323', monospace; /* Terminal-style hacker font */
+    background-color: #000; /* Black background for hacker theme */
+    color: #00ff00; /* Neon green text */
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,63 +11,82 @@ body {
     height: 100vh;
 }
 
+/* Container styling to resemble a terminal window */
 .container {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #111; /* Darker background inside container */
+    border: 2px solid #00ff00; /* Neon green border */
+    border-radius: 12px;
     padding: 20px;
-    width: 500px;
+    width: 450px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7); /* Glowing green shadow */
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
+/* Title styling for hacker theme */
 h1 {
-    font-size: 24px;
+    font-size: 22px;
     text-align: center;
-    color: #1a73e8;
-}
-
-.form-group {
+    color: #00ff00;
     margin-bottom: 20px;
 }
 
-label {
-    font-weight: bold;
-    margin-bottom: 8px;
-    display: block;
+/* Form group layout with hacker theme, fixing label position */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column; /* Stack label and input vertically */
+    align-items: flex-start;
+    width: 100%; /* Ensure the input and label use the full width */
 }
 
+/* Label text styling */
+label {
+    font-size: 14px;
+    color: #00ff00;
+    margin-bottom: 5px;
+    display: block;
+    width: 100%; /* Make label use the full width of the form-group */
+}
+
+/* Input, select, and button styling for terminal feel */
 input, select, button {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 2px solid #00ff00; /* Green border */
+    border-radius: 6px;
+    background-color: #000; /* Dark background */
+    color: #00ff00; /* Green text */
     font-size: 14px;
+    outline: none;
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
 }
 
+/* Button styling to resemble a hacking tool launch button */
 button {
-    background-color: #1a73e8;
-    color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: #1665c1;
+    background-color: #00ff00;
+    color: #000;
+    box-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00; /* Glowing neon effect */
 }
 
+/* Results box styling */
 #results {
     margin-top: 20px;
-    font-size: 14px;
-    background-color: #f9f9f9;
+    background-color: #111;
+    color: #00ff00;
     padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #00ff00;
+    border-radius: 6px;
+    font-size: 12px;
 }
 
+/* Custom query section */
 #customQuery {
-    margin-bottom: 20px;
-}
-
-#searchType {
     margin-bottom: 20px;
 }
