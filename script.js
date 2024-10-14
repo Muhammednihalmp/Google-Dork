@@ -6,10 +6,20 @@ document.getElementById("dorkForm").addEventListener("submit", function(event) {
     const customDork = document.getElementById("customDork").value;
     const searchType = document.getElementById("searchType").value;
 
+    // Validation for correct data input
+    if (!domain && searchType === 'site') {
+        document.getElementById("results").innerHTML = `<p style="color:red;">Please enter a valid domain!</p>`;
+        return;
+    }
+
     if (searchType === 'site') {
         performSearch(domain, category);
-    } else {
-        customSearch(customDork);
+    } else if (searchType === 'custom') {
+        if (customDork === '') {
+            document.getElementById("results").innerHTML = `<p style="color:red;">Please enter a custom Google Dork query!</p>`;
+        } else {
+            customSearch(customDork);
+        }
     }
 });
 
